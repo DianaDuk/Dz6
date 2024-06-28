@@ -1,0 +1,13 @@
+<script>
+    
+
+function removeElement(array,item){
+   const index = array.indexOf(item)
+   if(index > -1){
+    array.splice(index, 1)
+   }
+}
+ const array = [5, 8, 45, 10, 2, 7, 1];
+ removeElement(array, 8)
+ alert(array); 
+</script>
