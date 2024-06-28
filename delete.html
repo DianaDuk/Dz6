@@ -1,0 +1,20 @@
+    <script>
+        function removeChars(str, charsToRemove) {
+            return str.split('').filter(char => !charsToRemove.includes(char)).join('');
+        }
+
+        const inputStr = prompt('Введіть рядок:');
+        if (inputStr === null) {
+            alert('Введення рядка було скасовано.');
+        } else {
+            const inputChars = prompt('Введіть символи для видалення, розділені комами:');
+            if (inputChars === null) {
+                alert('Введення символів для видалення було скасовано.');
+            } else {
+                const charsToRemove = inputChars.split(',').map(char => char.trim());
+                const result = removeChars(inputStr, charsToRemove);
+                alert(`Результат: ${result}`);
+            }
+        }
+    </script>
+
