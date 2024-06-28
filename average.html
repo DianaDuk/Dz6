@@ -1,0 +1,15 @@
+<script>
+    function averageOfNumbers(arr) {
+            const numbers = arr.filter(item => typeof item === 'number');
+            if (numbers.length === 0) {
+                return 0; // Якщо немає числових елементів, повертаємо 0
+            }
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            return sum / numbers.length;
+        }
+
+        // Приклад використання функції
+        const mixedArray = [1, 'hello', true, 5, 10, 'world', false, 7];
+        const average = averageOfNumbers(mixedArray);
+        alert(`Середнє арифметичне числових елементів: ${average}`);
+</script>
